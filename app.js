@@ -1,16 +1,19 @@
 const express = require('express')
 const app =express() //call the method
 const port=2000
+const web =require('./routes/web')
 
 
 
 
 
 
-//route
-app.get('/', (req, res) => {
-    res.send('Hello 123World!')
-  })
+//routing:2000(/==url)
+
+app.set('view engine', 'ejs')
+// routing load
+app.use('/',web)
+
 
 
 
