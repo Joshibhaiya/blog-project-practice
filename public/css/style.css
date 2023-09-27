@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lobster&family=Poppins:wght@100&family=Roboto:wght@300&family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Lobster&family=Nanum+Gothic&family=Poppins:wght@100&family=Roboto:wght@300&family=Style+Script&display=swap');
+/* font-family: 'EB Garamond', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Style Script', cursive; */
+/* font-family: 'EB Garamond', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Style Script', cursive; */
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.inx-banner-img{
+    margin: 0px -12px;
+    width: 102%;
+    height: 700px;
+    box-sizing: border-box;
+}
+.logo-css{
+    margin: -5px;
+    width: 95px;
+    height: 80px;
+    border-radius: 65px;
+}
+.navbar{
+    background-color:#6a0c0bbd;
+}
+.navbar .navbar-nav .nav-item a{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 5px;
+    color: #b97d10;
+    font-weight: 900;
+}
+.card-img{
+    height: 300px;
+    padding: 30px;
+}
+/* #main-card-section{
+   margin-top: 70px;
+   margin-bottom: 70px; 
+} */
+/* #main-card-row{
+    margin: 0px 60px;
+    padding: 0px 40px;
+} */
+.p-card-section{
+    padding: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #914b4a;
+    font-family: 'Nanum Gothic', sans-serif;
+
+}
+.h4-card-section{
+    padding: 10px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #fbd500c7;
+    font-family: 'Style Script', cursive;
+}
+.button-card-section{
+    font-size: 30px;
+    margin: 55px;
+    border-radius: 30px;
+    background: #914b4a;
+    color: gold;
+    padding: 10px;
+}
+.main-read-card{
+    text-align: center;
+    padding: 15px 50px;
+    border-radius: 20px;
+    border: none;
+    background: gold;
+    font-size: 20px;
+}
+.main-details-car{
+    text-decoration: none;
+    letter-spacing: 5px;
+    font-size: 25px;
+    color: #914b4a;
+}
+#footer-container{
+    padding: 30px;
+    background: #deb887b8;
+}
+.logo-footer{
+    width: 100%;
+    height: 447px;
+    border-radius: 300px;
+}
+.h-footer{
+    color: cadetblue;
+    letter-spacing: 3px;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+.p-footer{
+    padding: 3px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-weight: 100;
+    color: indigo;
+    font-family: 'Style Script', cursive;
+}
+#i-footer{
+    padding: 5px;
+    font-size: 30px;
+    color: #008276b8;
+}
+.about-h1{
+    letter-spacing: 5px;
+    font-size: 70px;
+    color: gold;
+    font-family: 'Roboto', sans-serif;
+}
+.about-p{
+    line-height: 50px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-align: inherit;
+    color: saddlebrown;
+    font-family: 'Style Script', cursive;
+}
+/* .contact-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 50px;
+} */
+
+.login-form{
+    display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top:100px ;
+}
+
+.registration{
+    margin-top: 200px;
+}
+
+#admin{
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.admin-btn{
+    padding: 5px 90px;
+    border-radius: 5px;
+    background: #914b4a;
+}
+
+.admin-btn-content{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 5px;
+}
+.admin-btn2{
+    padding: 5px 128px;
+    border-radius: 5px;
+    background: #914b4a;
+}
+.admin-btn3{
+    padding: 5px 98px;
+    border-radius: 5px;
+    background: #914b4a;
+}
+.admin-btn4{
+    padding: 5px 40px;
+    border-radius: 5px;
+    background: #914b4a;
+}
+.admin-btn5{
+    padding: 5px 126px;
+    border-radius: 5px;
+    background: #914b4a;
+}
+.admin-btn6{
+    padding: 5px 137px;
+    border-radius: 5px;
+    background: #914b4a;
+}
+.admin-btn7{
+    padding: 5px 111px;
+    border-radius: 5px;
+    background: #914b4a;
+}
+.admin-btn8{
+    padding: 5px 119px;
+    border-radius: 5px;
+    background: #914b4a;
+}
+
+.admin-btn-content2{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 5px;
+}
+
+.t-c{
+    padding: 15px;
+}
+
+
+.tb-btn{
+    border: none;
+    padding: 10px;
+    background-color: #914b4a;
+    border-radius: 5px;
+}
+
+
+

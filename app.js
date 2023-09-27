@@ -11,6 +11,12 @@ const web =require('./routes/web')
 //routing:2000(/==url)
 
 app.set('view engine', 'ejs')
+
+
+// html css link
+app.use(express.static('public'))
+
+
 // routing load
 app.use('/',web)
 
