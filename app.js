@@ -2,9 +2,11 @@ const express = require('express')
 const app =express() //call the method
 const port=2000
 const web =require('./routes/web')
+const connectDB = require('./db/connectdb')
 
+// data base connection
 
-
+connectDB()
 
 
 
