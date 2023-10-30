@@ -1,6 +1,6 @@
 const mongoose =  require('mongoose')
 
-localurl = "mongodb://127.0.0.1:27017/blogproject"
+localurl = "mongodb://127.0.0.1:27017/blogprojectpractice"
 
 const connectDB =()=>{
     return mongoose.connect(localurl)

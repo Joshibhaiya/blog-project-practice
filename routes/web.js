@@ -31,6 +31,7 @@ route.get('/admin/blog/display',BlogController.display)
 
 
 route.get('/admin/category/display',CategoryController.display)
+route.post('/categoryinsert',CategoryController.categoryinsert)
 
 
 

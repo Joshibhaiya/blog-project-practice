@@ -13,6 +13,8 @@ connectDB()
 //routing:2000(/==url)
 
 app.set('view engine', 'ejs')
+// data ko get karnai kai lea
+app.use(express.urlencoded({extended:false}))
 
 
 // html css link

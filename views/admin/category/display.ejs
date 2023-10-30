@@ -7,39 +7,34 @@
     <div class="row">
       <%- include('../sidebar.ejs') %>
         <div class="col-md-9">
-            <h1><b>BLOG</b></h1>
+            <h1><b>Category</b></h1>
             
               <button
                 type="button"
                 class="btn btn-primary"
-                data-toggle="modal"
-                data-target="#exampleModal"
+                data-bs-toggle="modal" data-bs-target="#aa"
                 style="margin: 20px 0px;">
-                ADD blog</button>
+                ADD CATEGORY</button>
            <table class="table table-bordered table-sm">
             <thead>
               <tr>
                 <th>#ID</th>
-                <th>Image</th>
-                <th>Title</th>
-                <th>Description</th>
+                <th>Cname</th>
                 <th>Action</th>
               </tr>
-              <tbody>
-                <tr>
-                  <td style="padding: 15px;">1</td>
-                  <td style="padding: 15px;"><img src="/images/asset 5.png" alt="" height="30%" width="30%"></td>
-                  <td style="padding: 15px;"><p>IAF,s mig-21 crashes near hanumarmagh in rajsthan;
-                    three villeges killed , pilot safe
-                  </p></td>
-                  <td style="padding: 15px;">New delhi: A Mig 21 fighter aircraft of the indian A.. read more at http:// timesof.indiaat</td>
-                  <td style="padding: 15px;">
-                    <button class="tb-btn"><a href="" style="text-decoration: none;">VIEW</a></button><br><br>
-                    <button class="tb-btn"><a href="" style="text-decoration: none;">EDIT</a></button><br><br>
-                    <button class="tb-btn"><a href="" style="text-decoration: none;">DELETE</a></button><br>
-                  </td>
-                </tr>
-              </tbody>
+              <tr>
+                <% d.forEach((item)=>{%>
+                  <tr>
+                    <td><%= item._id %></td>
+                    <td><%= item.cname %></td>
+                    <td>
+                      <a href="/categoryview/<%= item._id %>" class="btn btn-info">view</a>
+                      <a href="/categoryEdit/<%= item._id %>" class="btn btn-success">edit</a>
+                      <a href="/categoryDelete/<%= item._id %>" class="btn btn-danger">delete</a>
+                    </td>
+                  </tr>
+                <%})%>
+              </tr>
             </thead>
             
            </table> 
@@ -52,7 +47,7 @@
 <!--post  Modal -->
 <div
   class="modal fade"
-  id="exampleModal"
+  id="aa"
   tabindex="-1"
   role="dialog"
   aria-labelledby="exampleModalLabel"
@@ -61,7 +56,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">ADD CATEGORY</h5>
         <button
           type="button"
           class="close"
@@ -71,11 +66,11 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">...</div>
+      <div class="modal-body"></div>
       <form action="/categoryinsert" method="post">
         <div class="form-group">
           <label for="">Category name</label>
-          <input type="text" name="cname" class="form-control">
+          <input type="text" name="categoryname" class="form-control">
         <button type="submit" class="btn btn-info">submit</button>
       </form>
     </div>
