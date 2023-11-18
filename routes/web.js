@@ -16,6 +16,8 @@ route.get('/about',FrontController.about)//static method
 route.get('/contact',FrontController.contact)//static method
 route.get('/blog',FrontController.blog)//static method
 route.get('/cyb',FrontController.cyb)//static method
+route.get('/detail/:id',FrontController.Detail)//static method
+
 
 
 
@@ -25,14 +27,20 @@ route.get('/admin/dashboard',AdminController.dashboard)
 // admin blog controoler
 
 route.get('/admin/blog/display',BlogController.display)
+route.post('/bloginsert',BlogController.bloginsert)
+route.get('/blogview/:id',BlogController.blogview)
+route.get('/blogEdit/:id',BlogController.blogedit)
+route.post('/blogupdate/:id',BlogController.blogUpdate)
+route.get('/blogDelete/:id',BlogController.blogdelete)
 
 
 // category controller
-
-
 route.get('/admin/category/display',CategoryController.display)
 route.post('/categoryinsert',CategoryController.categoryinsert)
-
+route.get('/categoryview/:id',CategoryController.categoryview)
+route.get('/categoryEdit/:id',CategoryController.categoryedit)
+route.post('/categoryupdate/:id',CategoryController.categoryupdate)
+route.get('/categorydelete/:id',CategoryController.categorydelete)
 
 
 // about controller

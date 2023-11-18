@@ -1,0 +1,60 @@
+<%- include('../../header.ejs') %>
+
+
+
+<!-- hero section start -->
+<div class="container-fluid" style="margin-top: 200px; margin-bottom: 300px;">
+    <div class="row">
+      <%- include('../sidebar.ejs') %>
+        <div class="col-md-9">
+            <h1><b>BLOG VIEW</b></h1>
+            
+            <!-- <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal" data-bs-target="#aa"
+                style="margin: 20px 0px;">
+                ADD blog</button> -->
+           <!---------- edit form start ------>
+           <form action="/blogupdate/<%= d._id %>" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+              <label for="">Category Name</label>
+              <input
+                type="text"
+                name="category"
+                class="form-control"
+                value="<%= d.cname %>"
+              />
+              <label for="">Title</label>
+              <input
+                type="text"
+                name="title"
+                class="form-control"
+                value="<%= d.title %>"
+              />
+              <label for="">Description</label>
+              <textarea
+                name="description"
+                id=""
+                cols="30"
+                rows="10"
+                class="form-control"
+              >
+<%= d.description %></textarea
+              >
+              <label for="">Image</label>
+              <input type="file" name="image" class="form-control">
+              <img src="<%= d.image.url %>" alt="" width="100px">
+            </div> 
+
+            <button type="submit" class="btn btn-info">UP DATE</button>
+          </form>
+          <!---------- edit form end ------>
+        </div>
+    </div>
+
+  </div>
+  <!-- hero section is end-->
+
+  <!--post  Modal -->
+<%- include('../../footer.ejs') %>

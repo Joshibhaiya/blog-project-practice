@@ -1,0 +1,147 @@
+<%- include('./header.ejs') %>
+<section id="main-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8" id="left-content">
+          <div class="blog-left">
+            <h1 class="main-left-h"><%= d.title %></h1>
+            <p><%= d.createdAt.toLocaleDateString() %></p>
+            <img
+              src="<%= d.image.url %>"
+              alt="blog1"
+              width="500px"
+              height="400px"
+            />
+          </div>
+          <div class="blog-desc" id="blog-description">
+            <p>
+                <%= d.description.slice(0,70) %>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div blog-right>
+            <div class="right-widget recent-post" id="main-section-post">
+              <h3 class="main-h3">Recent Blogs</h3>
+              <a href="#" style="text-decoration: none;">
+                <div class="rb-box" id="main-section-content">
+                  <div class="rb-box-img">
+                    <img src="images/xtgjozirtdrcweppfbvj.png" alt="blog1" style="margin: 5px;" width="100px"/>
+                  </div>
+                  <div class="rb-box-desc">
+                    <h4 class="right-content">
+                      Petrol-diesel price 8 May 2023: Fresh rate of fuel released; check rate list here
+                  </h4>
+                    <p>Posted On: October 22, 2018</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" style="text-decoration: none;">
+                <div class="rb-box" id="main-section-content">
+                  <div class="rb-box-img">
+                    <img src="images/asset 7.png" alt="blog1" style="margin: 5px;" width="100px"/>
+                  </div>
+                  <div class="rb-box-desc">
+                    <h4 class="right-content">
+                      
+                      The Kerala Story box office collection Day 3: Sudipto Sen’s film soon to join Rs 40 crore club
+                                          
+                  </h4>
+                    <p>Posted On: October 22, 2018</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" style="text-decoration: none;">
+                <div class="rb-box" id="main-section-content">
+                  <div class="rb-box-img">
+                    <img src="images/asset 6.png" alt="blog1" style="margin: 5px;" width="100px"/>
+                  </div>
+                  <div class="rb-box-desc">
+                    <h4 class="right-content">
+                      
+                      22 dead, many missing after boat capsizes in Kerala’s Malappuram
+                                          
+                  </h4>
+                    <p>Posted On: October 22, 2018</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" style="text-decoration: none;">
+                <div class="rb-box" id="main-section-content">
+                  <div class="rb-box-img">
+                    <img src="images/asset 5.png" alt="blog1" style="margin: 5px;" width="100px"/>
+                  </div>
+                  <div class="rb-box-desc">
+                    <h4 class="right-content">
+                      
+                      IAF's MiG-21 crashes near Hanumangarh in Rajasthan; three villagers killed, pilot safe
+                                          
+                  </h4>
+                    <p>Posted On: October 22, 2018</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" style="text-decoration: none;">
+                <div class="rb-box" id="main-section-content">
+                  <div class="rb-box-img">
+                    <img src="images/asset 4.png" alt="blog1" style="margin: 5px;" width="100px"/>
+                  </div>
+                  <div class="rb-box-desc">
+                    <h4 class="right-content">
+                      
+                      BJP moves EC, seeks action against Cong, Sonia over Karnataka 'sovereignty'
+                                          
+                  </h4>
+                    <p>Posted On: October 22, 2018</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" style="text-decoration: none;">
+                <div class="rb-box" id="main-section-content">
+                  <div class="rb-box-img">
+                    <img src="images/asset 3.jpeg" alt="blog1" style="margin: 5px;" width="100px"/>
+                  </div>
+                  <div class="rb-box-desc">
+                    <h4 class="right-content">
+                      
+                      news title goes here
+                                          
+                  </h4>
+                    <p>Posted On: October 22, 2018</p>
+                  </div>
+                </div>
+              </a>
+              <div class="right-widget categories">
+                <h3 class="content-category-h1">Categories</h3>
+                <ul class="ul-of-contetnt">
+                   <li><a href="#" class="a-content">Technology</a></li>
+                   <li><a href="#" class="a-content">Design</a></li>
+               </ul>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="container mt-4" id="comment-sectrions">
+    <h1 class="comment-heading">Leave a Comment</h1>
+    <form id="commentForm">
+      <div class="form-group">
+        <label for="nameInput">Name:</label>
+        <input type="text" class="form-control" id="nameInput" name="name">
+      </div>
+      <div class="form-group">
+        <label for="commentInput">Comment:</label>
+        <textarea class="form-control" id="commentInput" name="comment" rows="4"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" id="add">Submit</button>
+    </form>
+
+    <div id="comments" class="mt-4">
+      <!-- Display comments here -->
+    </div>
+  </div>
+<%- include('./footer.ejs') %>

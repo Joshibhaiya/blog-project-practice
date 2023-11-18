@@ -19,27 +19,27 @@
             <thead>
               <tr>
                 <th>#ID</th>
-                <th>Image</th>
-                <th>Title</th>
+                <th>Category</th>
+                <th>title</th>
                 <th>Description</th>
+                <th>Image</th>
                 <th>Action</th>
               </tr>
-              <tbody>
-                <tr>
-                  <td style="padding: 15px;">1</td>
-                  <td style="padding: 15px;"><img src="/images/asset 5.png" alt="" height="30%" width="30%"></td>
-                  <td style="padding: 15px;"><p>IAF,s mig-21 crashes near hanumarmagh in rajsthan;
-                    three villeges killed , pilot safe
-                  </p></td>
-                  <td style="padding: 15px;">New delhi: A Mig 21 fighter aircraft of the indian A.. read more at http:// timesof.indiaat</td>
-                  <td style="padding: 15px;">
-                    <button class="tb-btn"><a href="" style="text-decoration: none;">VIEW</a></button><br><br>
-                    <button class="tb-btn"><a href="" style="text-decoration: none;">EDIT</a></button><br><br>
-                    <button class="tb-btn"><a href="" style="text-decoration: none;">DELETE</a></button><br>
-                  </td>
-                </tr>
-              </tbody>
             </thead>
+            <% b.forEach((item)=>{ %>
+              <tr>
+                <td><%= item._id %></td>
+                <td><%= item.cname %></td>
+                <td><%= item.title %></td>
+                <td><%= item.description %></td>
+                <td><img src="<%= item.image.url %>" alt="" width="100"></td>
+                <td>
+                  <a href="/blogView/<%= item._id %>" class="btn btn-info">View</a>
+                  <a href="/blogEdit/<%= item._id %>" class="btn btn-primary">Edit</a>
+                  <a href="/blogDelete/<%= item._id %>" class="btn btn-danger">Delete</a>
+                </td>
+              </tr>
+            <% }) %>
             
            </table> 
         </div>
@@ -71,11 +71,14 @@
         </button>
       </div>
       <div class="modal-body"></div>
-      <form action="">
+      <form action="/bloginsert" method="post" enctype="multipart/form-data">
         <div class="form-group">
-          <label for="">Category</label>
+          <label for="">Select Category</label>
           <select name="category" id="" class="form-control">
             <option value="">Select Category</option>
+            <% c.forEach((item)=>{ %>
+              <option value="<%= item.cname %>"><%= item.cname %></option>
+            <% }) %>
           </select>
           <label for="">Title</label>
           <input type="text" name="title" class="form-control">

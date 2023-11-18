@@ -53,6 +53,7 @@ font-family: 'Style Script', cursive; */
     padding: 0px 40px;
 } */
 .p-card-section{
+    text-align: center;
     padding: 10px;
     font-size: 20px;
     letter-spacing: 1px;
@@ -61,6 +62,7 @@ font-family: 'Style Script', cursive; */
 
 }
 .h4-card-section{
+    text-align: center;
     padding: 10px;
     font-size: 25px;
     letter-spacing: 1px;
@@ -226,6 +228,84 @@ font-family: 'Style Script', cursive; */
     background-color: #914b4a;
     border-radius: 5px;
 }
+
+/* after the backend  */
+#main-section{
+    margin-top: 100px;
+    
+}
+.main-h3{
+    background: #914b4a;
+    color: gold;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 5px;
+    font-family: auto;
+}
+#main-section-content{
+    display: flex;
+}
+#left-content{
+    padding: 0px 50px;
+    text-align: center;
+}
+.main-left-h{
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: gold;
+    font-family: auto;
+}
+#blog-description{
+    line-height: 30px;
+    letter-spacing: 2px;
+    padding: 0px 30px;
+    font-size: 15px;
+    font-family: auto;
+}
+.right-content{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: black;
+    font-family: fangsong;
+}
+.content-category-h1{
+    text-align: center;
+    background: #914b4a;
+    padding: 5px;
+    color: #dc8f11;
+    font-family: emoji;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+}
+.ul-of-contetnt{
+    text-decoration: none;
+    text-align: center;
+    list-style: none;
+    background: #914b4a;
+    border-radius: 5px;
+}
+.a-content{
+    text-decoration: none;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #f7d935;
+}
+
+
+/* Custom CSS for additional styling */
+#comments {
+    margin-top: 30px;
+  }
+  
+  .comment {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
 
 
 

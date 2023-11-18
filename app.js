@@ -3,7 +3,9 @@ const app =express() //call the method
 const port=2000
 const web =require('./routes/web')
 const connectDB = require('./db/connectdb')
-
+// image upload code for uploading
+const fileUpload = require("express-fileupload");
+app.use(fileUpload({useTempFiles:true}));
 // data base connection
 
 connectDB()
