@@ -14,16 +14,19 @@
   <!-- blog card section is start -->
 <div class="container" id="main-card-section">
     <div class="row" id="main-card-row">
-      <div class="col-md-4 mt-5">
-        <div class="card shadow-lg h-100">
-          <img src="./images/asset 2.jpeg" alt="image" width="100%" class="card-img">
-          <p class="p-card-section">SHIVANI , 5/10/2023</p>
-          <h4 class="h4-card-section">news title goes here</h4>
-          <p class="p-card-section">description goes here</p>
-          <button class="button-card-section">read more</button>
+      <% b.forEach((item)=>{ %>
+        <div class="col-md-4 mt-5">
+          <div class="card shadow-lg h-100">
+            <img src="<%= item.image.url %>" alt="image" width="100%" class="card-img">
+            <p class="p-card-section"><%= item.createdAt.toLocaleDateString() %></p>
+            <h4 class="h4-card-section"><%= item.title %></h4>
+            <p class="p-card-section"><%= item.description.slice(0,70) %></p>
+            <a href="/detail/<%= item._id %>"><button class="button-card-section">read more</button></a>
+          </div>
         </div>
-      </div>
-      <div class="col-md-4 mt-5">
+      <% }) %>
+      
+      <!-- <div class="col-md-4 mt-5">
         <div class="card shadow-lg h-100">
           <img src="./images/asset 3.jpeg" alt="image" width="100%" class="card-img">
           <p class="p-card-section">SHIVANI , 5/10/2023</p>
@@ -67,7 +70,7 @@
           <p class="p-card-section">The Kerala Story box office collection Day 3: Since the film opened in theatres this week, The Keral</p>
           <button class="button-card-section">read more</button>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
   <br>

@@ -17,6 +17,11 @@ route.get('/contact',FrontController.contact)//static method
 route.get('/blog',FrontController.blog)//static method
 route.get('/cyb',FrontController.cyb)//static method
 route.get('/detail/:id',FrontController.Detail)//static method
+route.get('/bloglist/:name',FrontController.bloglist)
+route.get('/registration',FrontController.registration)
+route.post('/admininsert',FrontController.admininsert)
+route.post('/verifylogin',FrontController.verifylogin)
+route.get('/logout',FrontController.logout)
 
 
 
@@ -45,6 +50,9 @@ route.get('/categorydelete/:id',CategoryController.categorydelete)
 
 // about controller
 route.get('/admin/about/display',AboutController.display)
+route.get('/aboutEdit/:id',AboutController.aboutEdit)
+
+
 
 
 

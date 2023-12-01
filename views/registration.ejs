@@ -1,0 +1,32 @@
+  
+  <%- include('./header.ejs') %>
+
+  <!-- login form start -->
+  <div class="container login-form">
+    <div class="col-md-6">
+        <form action="/admininsert" method="post">
+            <h2 class="mb-4"> Adminstration Login</h2>
+            <div class="mb-3 form-group">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="username" required>
+            </div>
+            <div class="mb-3 form-group">
+                <label for="password" class="form-label">Email</label>
+                <input type="email" class="form-control" id="password" name="email" placeholder="Email" required>
+            </div>
+            <div class="mb-3 form-group">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
+            </div>
+            <div class="mb-3 form-group">
+                <label for="password" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="password" name="cpass" placeholder="Confirm Password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary">submit</button>
+        </form>
+    </div>
+</div>
+  <!-- login form is end know -->
+
+  <%- include('./footer.ejs') %>

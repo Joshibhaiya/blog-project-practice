@@ -15,7 +15,7 @@
           </div>
           <div class="blog-desc" id="blog-description">
             <p>
-                <%= d.description.slice(0,70) %>
+                <%= d.description %>
             </p>
           </div>
         </div>
@@ -23,20 +23,24 @@
           <div blog-right>
             <div class="right-widget recent-post" id="main-section-post">
               <h3 class="main-h3">Recent Blogs</h3>
-              <a href="#" style="text-decoration: none;">
-                <div class="rb-box" id="main-section-content">
-                  <div class="rb-box-img">
-                    <img src="images/xtgjozirtdrcweppfbvj.png" alt="blog1" style="margin: 5px;" width="100px"/>
+              <% r.forEach((item)=>{ %>
+                <a href="/detail/<%= item._id %>" style="text-decoration: none;">
+                  <div class="rb-box" id="main-section-content">
+                    <div class="rb-box-img">
+                      <img src="<%= item.image.url %>" alt="blog1" style="margin: 5px;" width="100px"/>
+                    </div>
+                    <div class="rb-box-desc">
+                      <h4 class="right-content">
+                        <%= item.title %>
+                    </h4>
+                      <p><%= item.createdAt.toLocaleDateString() %></p>
+                      
+                    </div>
                   </div>
-                  <div class="rb-box-desc">
-                    <h4 class="right-content">
-                      Petrol-diesel price 8 May 2023: Fresh rate of fuel released; check rate list here
-                  </h4>
-                    <p>Posted On: October 22, 2018</p>
-                  </div>
-                </div>
-              </a>
-              <a href="#" style="text-decoration: none;">
+                </a>
+              <% }) %>
+              
+              <!-- <a href="#" style="text-decoration: none;">
                 <div class="rb-box" id="main-section-content">
                   <div class="rb-box-img">
                     <img src="images/asset 7.png" alt="blog1" style="margin: 5px;" width="100px"/>
@@ -110,12 +114,15 @@
                     <p>Posted On: October 22, 2018</p>
                   </div>
                 </div>
-              </a>
+              </a> -->
               <div class="right-widget categories">
                 <h3 class="content-category-h1">Categories</h3>
                 <ul class="ul-of-contetnt">
-                   <li><a href="#" class="a-content">Technology</a></li>
-                   <li><a href="#" class="a-content">Design</a></li>
+                  <% c.forEach((item)=>{ %>
+                    <li><a href="/bloglist/<%= item.cname %>" class="a-content"><%- item.cname %></a></li>
+                  <% }) %>
+                   
+                   
                </ul>
             </div>
 

@@ -4,18 +4,23 @@
   <!-- login form start -->
   <div class="container login-form">
     <div class="col-md-6">
-        <form>
-            <h2 class="mb-4">Login</h2>
+        <form action="/verifylogin" method="post">
+            <h2 class="mb-4"> Adminstration Login</h2>
+            <% if(message.length> 0){ %>
+                <div class="alert alert-danger">
+                    <%= message %>
+                </div>
+            <% } %>
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" name="username" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+                <input type="password" class="form-control" id="password" name="password" placeholder="password" required>
             </div>
-            <button type="submit" class="btn btn-primary"><a href="" style="text-decoration: none; color: white;">Sign In</a></button>
-            <button type="button" class="btn btn-secondary"><a href="" style="text-decoration: none; color: white;">Login</a></button>
+            <button type="submit" class="btn btn-secondary">Login</button>
+            <button type="submit" class="btn" style="background-color: gold;"><a href="/registration" style="text-decoration: none;color:blue;">Sing up</a></button>
         </form>
     </div>
 </div>
