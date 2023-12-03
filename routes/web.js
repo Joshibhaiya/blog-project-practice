@@ -5,6 +5,7 @@ const BlogControoler = require('../controllers/admin/BlogController')
 const BlogController = require('../controllers/admin/BlogController')
 const CategoryController = require('../controllers/admin/CategoryController')
 const AboutController = require('../controllers/admin/AboutController')
+const ContactController = require('../controllers/admin/ContactController')
 const route = express.Router()
 
 
@@ -50,7 +51,15 @@ route.get('/categorydelete/:id',CategoryController.categorydelete)
 
 // about controller
 route.get('/admin/about/display',AboutController.display)
-route.get('/aboutEdit/:id',AboutController.aboutEdit)
+route.post('/aboutinsert',AboutController.aboutinsert)
+route.get('/aboutedit/:id',AboutController.aboutedit)
+route.post('/aboutupdate/:id',AboutController.aboutupdate)
+route.get('/aboutdelete/:id',AboutController.aboutdelete)
+
+// Contact controller 
+route.post('/contactinsert',ContactController.contactinsert)
+route.get('/admin/contact/display',ContactController.contactdisplay)
+
 
 
 

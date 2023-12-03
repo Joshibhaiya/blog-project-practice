@@ -1,6 +1,7 @@
 const BlogModel = require('../models/Blog')
 const CategotyModel = require('../models/Category')
 const AdminModel = require('../models/Admin')
+const AboutModel = require('../models/about')
 
 
 const bcrypt = require('bcrypt')
@@ -18,7 +19,7 @@ class FrontController {
 
     static about = async (req, res) => {
         try {
-            const about = await AdminModel.findOne()
+            const about = await AboutModel.find()
             res.render('about',{a:about})
         } catch (error) {
             console.log(error)

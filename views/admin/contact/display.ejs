@@ -7,34 +7,33 @@
     <div class="row">
       <%- include('../sidebar.ejs') %>
         <div class="col-md-9">
-            <h1><b>Add about</b></h1>
+            <h1><b>CONTACT LIST</b></h1>
             
-              <button
+              <!-- <button
                 type="button"
                 class="btn btn-primary"
                 data-bs-toggle="modal" data-bs-target="#aa"
                 style="margin: 20px 0px;">
-                ADD About</button>
+                ADD CATEGORY</button> -->
            <table class="table table-bordered table-sm">
             <thead>
               <tr>
                 <th>#ID</th>
-                <th>About</th>
-                <th>Action</th>
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>message</th>
               </tr>
               <tr>
                 <% d.forEach((item)=>{%>
-                  <tr>
+                <tr>
                     <td><%= item._id %></td>
-                    <td>
-                      <%= item.about %>
-                    </td>
-                    <td>
-                      <a href="/aboutedit/<%= item._id %>" class="btn btn-success">edit</a>
-                      <a href="/aboutDelete/<%= item._id %>" class="btn btn-danger">delete</a>
-                    </td>
-                  </tr>
-                <%})%>
+                    <td><%= item.name %></td>
+                    <td><%= item.email %></td>
+                    <td><%= item.phone %></td>
+                    <td><%= item.message %></td>
+                </tr>
+                <%})%>   
               </tr>
             </thead>
             
@@ -46,7 +45,7 @@
   <!-- hero section is end-->
 
 <!--post  Modal -->
-<div
+<!-- <div
   class="modal fade"
   id="aa"
   tabindex="-1"
@@ -57,7 +56,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">ADD About</h5>
+        <h5 class="modal-title" id="exampleModalLabel">ADD CATEGORY</h5>
         <button
           type="button"
           class="close"
@@ -68,16 +67,15 @@
         </button>
       </div>
       <div class="modal-body"></div>
-      <form action="/aboutinsert" method="post">
+      <form action="/categoryinsert" method="post">
         <div class="form-group">
-          <label for="">About description</label>
-          <!-- <input type="text" name="categoryname" class="form-control"> -->
-          <textarea name="about" id="about" cols="30" rows="10" class="form-control"></textarea>
+          <label for="">Category name</label>
+          <input type="text" name="categoryname" class="form-control">
         <button type="submit" class="btn btn-info">submit</button>
       </form>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <%- include('../../footer.ejs') %>

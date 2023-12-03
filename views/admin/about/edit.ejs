@@ -1,0 +1,21 @@
+<%- include('../../header.ejs') %>
+<!-- hero section start -->
+<div class="container-fluid" style="margin-top: 200px; margin-bottom: 300px;">
+    <div class="row" style="margin-bottom: 200px;">
+      <%- include('../sidebar.ejs') %>
+        <div class="col-md-9">
+            <h1><b>About edit</b></h1>
+            <form action="/aboutupdate/<%= d._id %>" method="post">
+              <div class="form-group">
+                <label for="">About Content</label>
+                 <textarea name="about" id="about" cols="30" rows="10" class="form-control" value="<%= d.about %>"></textarea>
+              <button type="submit" class="btn btn-info">UP date</button>
+            </form>
+        </div>
+    </div>
+
+  </div>
+
+
+
+<%- include('../../footer.ejs') %>
